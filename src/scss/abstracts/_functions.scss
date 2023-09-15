@@ -1,0 +1,27 @@
+@function get-font-size($size, $elem) {
+	@return nth(map-get(map-get($font__scale, $elem), $size), 1);
+}
+
+@function get-line-height($size, $elem) {
+	@return nth(map-get(map-get($font__scale, $elem), $size), 2);
+}
+
+@function get-kerning($size, $elem) {
+	@return nth(map-get(map-get($font__scale, $elem), $size), 3);
+}
+
+@function get-font-family($elem) {
+	@return map-get($font__family, $elem);
+}
+
+@function get-font-weight($elem) {
+	@return map-get($font__weight, $elem);
+}
+
+@function get-content-padding($elem) {
+	@return map-get($content__padding, $elem);
+}
+
+@function color($elem, $variant) {
+	@return map-get(map-get($color, $elem), $variant);
+}
